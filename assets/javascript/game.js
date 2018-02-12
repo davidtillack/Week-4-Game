@@ -6,8 +6,11 @@ var numberStorage = 0;
 
 // Set initial randomized game values
 function initializeGame(){
+	// RandomNumber is between 120 and 19
 	randomNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 	console.log(randomNumber);
+
+	// Crystals are between 1-12
 	crystNumberRed = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 	console.log(crystNumberRed);
 	crystNumberBlue = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
@@ -16,54 +19,59 @@ function initializeGame(){
 	console.log(crystNumberBlack);
 	crystNumberGreen = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 	console.log(crystNumberGreen);
+	
+	// Pre-Set The User Stats
 	$("#wins").html(" " + wins); 
 	$("#losses").html(" " + losses); 
 	$("#randomNumber").html("The random number to match is: " + randomNumber);
 }
 initializeGame();
 
+// Run a function for winning and losing
 function gameRules(){
 	if (randomNumber === numberStorage){
 		wins++;
 		alert('You Win! Nice Work.');
 		$("#wins").html(" " + wins);
-		$("#numberStorage").empty();
-		$("#numberStorage").html("Your score is: 0");
+		$("#numberStorage").empty(); // reset NumberStorage
+		$("#numberStorage").html("Your score is: 0"); // Placeholder
 		numberStorage = 0;
-		initializeGame();
+		initializeGame(); // reset initial randomized game values
 	
 	} else if (randomNumber < numberStorage){
 		losses++;
 		alert('Oops... You Went Over. Try Again!');
 		$("#losses").html(" " + losses);
-		$("#numberStorage").empty();
-		$("#numberStorage").html("Your score is: 0");
+		$("#numberStorage").empty(); // reset NumberStorage
+		$("#numberStorage").html("Your score is: 0"); // Placeholder
 		numberStorage = 0
-		initializeGame();
+		initializeGame(); // reset initial randomized game values
 	}
 };
 gameRules();
 
+
+// Create on-click functions for each crystal
 $("#crystalOne").on("click",function(){
-	numberStorage += crystNumberRed;
+	numberStorage += crystNumberRed; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
 	gameRules();
 });
 
 $("#crystalTwo").on("click",function(){
-	numberStorage += crystNumberBlue;
+	numberStorage += crystNumberBlue; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
 	gameRules();
 });
 
 $("#crystalThree").on("click",function(){
-	numberStorage += crystNumberBlack;
+	numberStorage += crystNumberBlack; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
 	gameRules();
 });
 
 $("#crystalFour").on("click",function(){
-	numberStorage += crystNumberGreen;
+	numberStorage += crystNumberGreen; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
 	gameRules();
 });

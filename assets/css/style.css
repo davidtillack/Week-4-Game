@@ -111,18 +111,22 @@ img.crystals{
 
 button#crystalOne{
   display:inline;
+  width:25%;
 }
 
 button#crystalTwo{
   display:inline;
+  width:25%;
 }
 
 button#crystalThree{
   display:inline;
+  width:25%;
 }
 
 button#crystalFour{
   display:inline;
+  width:25%;
 }
 
 div.paragraphs{

@@ -3,6 +3,8 @@ var wins = 0;
 var losses = 0;
 var numberStorage = 0;
 
+
+// Set initial randomized game values
 function initializeGame(){
 	randomNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 	console.log(randomNumber);
@@ -13,25 +15,29 @@ function initializeGame(){
 	crystNumberBlack = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 	console.log(crystNumberBlack);
 	crystNumberGreen = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-	console.log(crystNumberGreen); 
-	$("#randomNumber").html("The number to guess is: " + randomNumber);
+	console.log(crystNumberGreen);
+	$("#wins").html(" " + wins); 
+	$("#losses").html(" " + losses); 
+	$("#randomNumber").html("The random number to match is: " + randomNumber);
 }
 initializeGame();
 
 function gameRules(){
 	if (randomNumber === numberStorage){
 		wins++;
-		alert('You won! Nice Work.');
-		$("#wins").html("" + wins);
-		$("#score").empty();
+		alert('You Win! Nice Work.');
+		$("#wins").html(" " + wins);
+		$("#numberStorage").empty();
+		$("#numberStorage").html("Your score is: 0");
 		numberStorage = 0;
 		initializeGame();
 	
 	} else if (randomNumber < numberStorage){
 		losses++;
-		alert('Oops... You went over. Try again!');
-		$("#losses").html("" + losses);
+		alert('Oops... You Went Over. Try Again!');
+		$("#losses").html(" " + losses);
 		$("#numberStorage").empty();
+		$("#numberStorage").html("Your score is: 0");
 		numberStorage = 0
 		initializeGame();
 	}

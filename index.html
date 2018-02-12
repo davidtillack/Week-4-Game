@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="assets/images/Social-Icon-Image.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<title>CrystalsCollector Game</title>
+
+</head>
+
+<body id="loadingImage">
+		<div class="container">
+			<h1>Crystals Collector Game</h1>
+		</div>
+
+		<div class="container">
+			<div class="paragraphs">
+				<h3 id="blinkText"> ------------ Instructions ------------ <h3>
+
+				<p>A random number will be assigned to you at the start of the game.</p>
+
+				<p>As you can see below, there are four crystals. Click these crystals to reveal values added to your score.</p>
+
+				<p>You win by matching your score to the random number. You lose if your number goes over the random number.</p>
+
+				<p>The crystal values are reset every new game for an added challenge.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div id="random"> 
+				<h2 id="randomNumber">Random Number</h2>
+			</div>
+
+			<div class="stats">
+				<p>Wins:<span id="wins"></span></p>
+				<p>Losses:<span id="losses"></span></p>
+			</div>
+		</div>
+
+		<div class="container center">
+			<div>
+				<button id="crystalOne"><img class="crystals" src="https://vignette.wikia.nocookie.net/treelands/images/5/5e/Redcrystal1.png/revision/latest?cb=20170204233110" style="height:150px; width:150px;" alt="crystal image"></button>
+			</div>
+
+			<div>
+				<button id="crystalTwo"><img class="crystals" src="https://vignette.wikia.nocookie.net/powerlisting/images/d/d3/2013-10-Blue-Crystal-Abstract.jpg/revision/latest?cb=20160227092023&format=original" style="height:150px; width:150px;" alt="2nd crystal image"></button>
+			</div>
+
+			<div>
+				<button id="crystalThree"><img class="crystals" src="https://orig00.deviantart.net/480a/f/2015/196/0/4/black_crystal_by_omnisimon11-d91du2z.png" style="height:150px; width:150px;" alt="3rd crystal image"></button>
+			</div>
+
+			<div>
+				<button id="crystalFour"><img class="crystals" src="https://s1.thcdn.com/productimg/0/600/600/79/10619479-1340982452-230158.jpg" style="height:150px; width:150px;" alt="4th crystal image"></button>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div id="userNumber">
+				<h2 id="numberStorage"></h2>	
+			</div>
+		</div>
+<script src="assets/javascript/game.js"></script>
+
+	</body>
+</html>

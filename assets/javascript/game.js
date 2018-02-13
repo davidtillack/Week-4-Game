@@ -10,7 +10,7 @@ function initializeGame(){
 	randomNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 	console.log(randomNumber);
 
-	// Crystals are between 1-12
+	// Crystals are random numbers between 1-12
 	crystNumberRed = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 	console.log(crystNumberRed);
 	crystNumberBlue = Math.floor(Math.random() * (12 - 1 + 1)) + 1;

@@ -48,10 +48,11 @@ h1 {
   
 .paragraph {
   color:#010101;
-  width:60%;
+  width:100%;
   padding:10px;
   margin-bottom:20px;
   margin-left:10px;
+  display:inline;
 }
 
 #random {

@@ -136,3 +136,15 @@ div.container{
 h3{
   text-align:center;
 }
+
+/* Below is failed attempt at making the browser mobile friendly... */
+
+@media (max-width:630px;){ 
+  div#random{
+    float:left;
+  }
+  div.stats{
+    clear:both;
+    float:left;
+  }
+}

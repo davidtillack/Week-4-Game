@@ -44,7 +44,7 @@ function gameRules(){
 		$("#losses").html(" " + losses);
 		$("#numberStorage").empty(); // reset NumberStorage
 		$("#numberStorage").html("Your score is: 0"); // Placeholder
-		numberStorage = 0
+		numberStorage = 0;
 		initializeGame(); // reset initial randomized game values
 	}
 };
@@ -55,25 +55,25 @@ gameRules();
 $("#crystalOne").on("click",function(){
 	numberStorage += crystNumberRed; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
-	gameRules();
+	gameRules(); // Call back on gameRules after the click to check if you win or lose
 });
 
 $("#crystalTwo").on("click",function(){
 	numberStorage += crystNumberBlue; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
-	gameRules();
+	gameRules(); // Call back on gameRules after the click to check if you win or lose
 });
 
 $("#crystalThree").on("click",function(){
 	numberStorage += crystNumberBlack; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
-	gameRules();
+	gameRules(); // Call back on gameRules after the click to check if you win or lose
 });
 
 $("#crystalFour").on("click",function(){
 	numberStorage += crystNumberGreen; // Add crystal's value to user's score
 	$('#numberStorage').html("Your score is: " + numberStorage);
-	gameRules();
+	gameRules(); // Call back on gameRules after the click to check if you win or lose
 });
 
 

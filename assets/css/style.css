@@ -10,7 +10,6 @@ div.container {
 }
 
 h1 {
-
   font-family:verdana;
   font-size:44px;
   color:#008080;
@@ -19,11 +18,9 @@ h1 {
   margin-bottom:20px;
   margin-left:0px;
   text-align:center;
-  
 }
 
 #blinkText {
-
     animation:1s blinker linear infinite;
     -webkit-animation:1s blinker linear infinite;
     -moz-animation:1s blinker linear infinite;
@@ -49,13 +46,12 @@ h1 {
      100% { opacity: 1.0; }
     }
   
-.paragraphs {
+.paragraph {
   color:#010101;
   width:60%;
   padding:10px;
   margin-bottom:20px;
   margin-left:10px;
-
 }
 
 #random {
@@ -66,7 +62,6 @@ h1 {
   height:82px;
   margin-bottom:20px;
   margin-left:10px;
-
 }
 
 .stats {
@@ -139,8 +134,4 @@ div.container{
 
 h3{
   text-align:center;
-}
-
-@media and (max-width:920px;){
-
 }
